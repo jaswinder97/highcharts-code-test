@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_one :subscription
   has_many :account_accesses
   has_many :accounts, :through => :account_accesses
-
+  has_many :stats, :through => :apps
 
   # Include default devise modules.
   devise :invitable, :database_authenticatable, :registerable,

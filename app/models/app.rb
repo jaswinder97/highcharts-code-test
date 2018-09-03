@@ -1,5 +1,7 @@
 class App < ApplicationRecord
   belongs_to :user, optional: true
+  has_many :stats
+  
   validates_url :openid_redirect_urls, message: "- please include http or https in the URL"
   validates_url :client_uri, message: "- please include http or https in the URL"
   validates_url :policy_uri, message: "- please include http or https in the URL"
